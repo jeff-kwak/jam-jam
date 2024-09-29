@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://p2ahwrg3ylal"]
+
+[ext_resource type="Script" path="res://stages/levels/level.gd" id="1_w47v8"]
+
+[node name="Level03" type="Node2D"]
+script = ExtResource("1_w47v8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -140.0
+offset_right = 168.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 40
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Fail or Restart Level"
+
+[node name="NextLevelButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Go to Next Level"
+
+[node name="LevelNameLabel" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.5
+offset_top = 40.0
+offset_right = 43.5
+offset_bottom = 63.0
+grow_horizontal = 2
+text = "LevelName
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerDisplay" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]

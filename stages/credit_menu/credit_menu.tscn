@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk04fxtiac080"]
+
+[ext_resource type="Script" path="res://stages/credit_menu/credit_menu.gd" id="1_ds2gl"]
+
+[node name="CreditMenu" type="Node2D"]
+script = ExtResource("1_ds2gl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VFlowContainer" type="VFlowContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -131.5
+offset_top = 100.0
+offset_right = 131.5
+offset_bottom = 204.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer"]
+layout_mode = 2
+text = "Code"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer"]
+layout_mode = 2
+text = "Art"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer"]
+layout_mode = 2
+text = "Special Credit"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer"]
+layout_mode = 2
+text = "Director"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer"]
+layout_mode = 2
+text = "Producer"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Programer Name"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Artist Name"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Musician Name
+"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Additional credits
+"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Director Name"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="CanvasLayer/VFlowContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Producer Name"
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 177.0
+offset_bottom = 51.0
+text = "Back to Start Menu"
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]
