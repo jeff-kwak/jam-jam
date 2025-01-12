@@ -20,6 +20,7 @@ func bind(fsm: FiniteStateMachine) -> void:
 
 
 func enter() -> void:
+    print("> %s::%s" % [host.name, self.name])
     for callback in _on_enter:
         callback.call()
 
@@ -34,6 +35,7 @@ func send(some_trigger: int) -> void:
 
 
 func exit() -> void:
+    print("< %s::%s" % [host.name, self.name])
     for callback in _on_exit:
         callback.call()
 
