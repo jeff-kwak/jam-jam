@@ -62,8 +62,8 @@ func start(initial_state: int) -> void:
 
     print("FSM: initial state set to %s" % initial_state)
 
-    _state_references[initial_state].enter()
     _current_state = initial_state
+    _state_references[initial_state].enter()
 
 
 func _change_state(next_state_value: int) -> void:

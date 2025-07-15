@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6ay7xgem5y01"]
+
+[node name="GamePlay" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Game Play"

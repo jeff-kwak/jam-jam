@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdqmsae51uhly"]
 
-[ext_resource type="Script" path="res://stages/pause_menu/pause_menu.gd" id="1_78x7h"]
+[ext_resource type="Script" uid="uid://dl02vgp7bxaq2" path="res://stages/pause_menu/pause_menu.gd" id="1_78x7h"]
 
 [node name="PauseMenu" type="Node2D"]
 z_index = 4096
@@ -41,15 +41,10 @@ grow_vertical = 2
 layout_mode = 2
 text = "Resume"
 
-[node name="RestartButton" type="Button" parent="CanvasLayer/ColorRect/VBoxContainer"]
-layout_mode = 2
-text = "Restart Level"
-
 [node name="QuitButton" type="Button" parent="CanvasLayer/ColorRect/VBoxContainer"]
 layout_mode = 2
 text = "Quit
 "
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/ColorRect/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
