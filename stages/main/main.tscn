@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://6832vsbsmyi5"]
+[gd_scene load_steps=6 format=3 uid="uid://6832vsbsmyi5"]
 
 [ext_resource type="Script" uid="uid://dmt2go73cp3q5" path="res://stages/main/main.gd" id="1_q2fcq"]
 [ext_resource type="PackedScene" uid="uid://drwhap50vye7c" path="res://stages/start_menu/start_menu.tscn" id="2_r4wig"]
 [ext_resource type="PackedScene" uid="uid://dk04fxtiac080" path="res://stages/credit_menu/credit_menu.tscn" id="3_us2ej"]
-[ext_resource type="PackedScene" uid="uid://bdqmsae51uhly" path="res://stages/pause_menu/pause_menu.tscn" id="4_khj5p"]
 [ext_resource type="PackedScene" uid="uid://b6ay7xgem5y01" path="res://stages/game_play/game_play.tscn" id="5_3f6tk"]
 [ext_resource type="Script" uid="uid://ct2or2gt2ih0b" path="res://addons/finite_state_machine/finite_state.gd" id="6_woy08"]
 
@@ -11,7 +10,6 @@
 script = ExtResource("1_q2fcq")
 _start_menu = ExtResource("2_r4wig")
 _credits_menu = ExtResource("3_us2ej")
-_pause_menu = ExtResource("4_khj5p")
 _game_play = ExtResource("5_3f6tk")
 
 [node name="Stages" type="Node2D" parent="."]
@@ -27,9 +25,5 @@ script = ExtResource("6_woy08")
 metadata/_custom_type_script = "uid://ct2or2gt2ih0b"
 
 [node name="GamePlay" type="Node" parent="States"]
-script = ExtResource("6_woy08")
-metadata/_custom_type_script = "uid://ct2or2gt2ih0b"
-
-[node name="Paused" type="Node" parent="States"]
 script = ExtResource("6_woy08")
 metadata/_custom_type_script = "uid://ct2or2gt2ih0b"
